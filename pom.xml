@@ -11,9 +11,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <groupId>guru.springframework</groupId>
+    <groupId>odfd.com</groupId>
     <artifactId>mssc-brewery-bom</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 
     <packaging>pom</packaging>
 
@@ -121,6 +121,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-artemis</artifactId>
+        </dependency>
     </dependencies>
 
     <build>
@@ -199,4 +203,12 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>github</id> <!-- this id must be equal to id in ~/.m2/settings.xml file! -->
+            <name>oflorez1381</name>
+            <url>https://maven.pkg.github.com/oflorez1381/mssc-brewery-bom</url>
+        </repository>
+    </distributionManagement>
 </project>
